@@ -356,7 +356,7 @@ function scalePixel(scaler, rotDeg, ker3x3, trg, trgi, trgWidth, blendInfo) {
   }
 }
 
-export function scaleImage(
+function scaleImage(
   scaleSize,
   src,
   trg,
@@ -861,3 +861,5 @@ function alphaBlend(n, m, dstPtr, col) {
   const blend = redComponent | greenComponent | blueComponent;
   dstPtr.set(blend | 0xff000000);
 }
+
+window.scaleImage = scaleImage;
